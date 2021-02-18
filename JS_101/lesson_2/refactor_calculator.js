@@ -15,7 +15,7 @@ function invalidNumber(number) {
 
 prompt(`Welcome to the Calculator!`);
 
-
+while (true) {
   prompt(`What is the first number?`);
   let number1 = readline.question();
 
@@ -55,11 +55,9 @@ prompt(`Welcome to the Calculator!`);
     case '4':
       output = number1 / number2;
   }
-
   console.log(`The result is ${output}.`);
+  prompt(`Would you like to do another calculation?\n1)yes 2)no`);
+  let answer = readline.question();
 
-
-  // prompt(`Would you like to do another calculation?\n1)yes 2)no`);
-  // let answer = readline.question();
-
-
+  if (answer !== '1') break;
+}
