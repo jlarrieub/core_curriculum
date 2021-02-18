@@ -3,10 +3,16 @@
 // //ask the user for the operation
 // //perform the operation
 // //display the result of the operation
+const LANGUAGE = 'es';
 const readline = require(`readline-sync`);
 const MESSAGES = require('./calculator_messages.json');
 
-function prompt(message) {
+function messages(message, lang = 'en') {
+  return MESSAGES[lang][message];
+}
+
+function prompt(key) {
+  let message = messages(key, LANGUAGE);
   console.log(`=> ${message}`);
 }
 
@@ -14,30 +20,30 @@ function invalidNumber(number) {
   return number.trimStart() === '' || Number.isNaN(Number(number));
 }
 
-prompt(MESSAGES['welcome']);
+prompt('welcome');
 
 while (true) {
-  prompt(MESSAGES['firstNumber']);
+  prompt('firstNumber');
   let number1 = readline.question();
 
   while (invalidNumber(number1)) {
-    prompt(MESSAGES['invalidFirstNumber']);
+    prompt('invalidFirstNumber');
     number1 = readline.question();
   }
 
-  prompt(MESSAGES['secondNumber']);
+  prompt('secondNumber');
   let number2 = readline.question();
 
   while (invalidNumber(number2)) {
-    prompt(MESSAGES['invalidSecondNumber']);
+    prompt('invalidSecondNumber');
     number2 = readline.question();
   }
 
-  prompt(MESSAGES['operation']);
+  prompt('operation');
   let operation = readline.question();
 
   while (!['1', '2', '3', '4'].includes(operation)) {
-    prompt(MESSAGES['invalidOperation']);
+    prompt('invalidOperation');
     operation = readline.question();
   }
 
@@ -55,9 +61,11 @@ while (true) {
       break;
     case '4':
       output = Number(number1) / Number(number2);
+      break;
   }
-  console.log(`The result is ${output}.`);
-  prompt(MESSAGES['newCalculation']);
+  prompt('resultOperation');
+  console.log(`${ output }`);
+  prompt('newCalculation');
   let answer = readline.question();
 
   if (answer !== '1') break;

@@ -1,4 +1,5 @@
 {
+  "en": {
   "welcome": "Welcome to the calculator!",
   "firstNumber": "What is the first number?",
   "invalidFirstNumber": "Hmm... that doesnt look like a valid number\nPlease enter the first number:",
@@ -6,5 +7,18 @@
   "invalidSecondNumber": "Hmm...that doesnt look like a valid number\nPlease enter the second number:",
   "operation": "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
   "invalidOperation": "Must choose 1, 2, 3 or 4:",
+  "resultOperation": "The result is:",
   "newCalculation": "Would you like to do another calculation?\n1)yes 2)no"
+  },
+  "es": {
+    "welcome": "Bienvenido a la calculadora!",
+    "firstNumber": "Cual es el primer numero?",
+    "invalidFirstNumber": "Hmm... ese no parecece ser un numero valido\nPorfavor ingrese el primer numero:",
+    "secondNumber": "Cual es el segundo numero?",
+    "invalidSecondNumber": "Hmm... ese no parecece ser un numero valido\nPorfavor ingrese el segundo numero:",
+    "operation": "Que operacion quisiera realizar?\n1) Sumar 2) Restar 3) Multiplicar 4) Dividir",
+    "invalidOperation": "Debe escoger entre 1, 2, 3 o 4:",
+    "resultOperation": "El resultado es:",
+    "newCalculation": "Quisiera realizar otra operacion?\n1)si 2)no"
+    }
 }

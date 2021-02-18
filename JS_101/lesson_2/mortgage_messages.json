@@ -1,0 +1,10 @@
+{
+  "mortgageCalculator": "Welcome to your Mortgage Calculator!\n",
+  "loanAmount": "What is your loan amount?",
+  "invalidLoanAmount": "Please enter a positive number:",
+  "anualPercentageRate": "What is the annual percentage rate? If 5% enter 5, if 2.5% enter 2.5",
+  "anualPercentageRateAgain": "Please enter a positive number:",
+  "loanDuration": "What is the duration of the loan, in months?",
+  "loanDurationMonthsAgain": "Please enter a positive number:",
+  "anotherCalculation": "Would you like to do another calculation? (y/n)"
+}
