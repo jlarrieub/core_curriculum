@@ -1,5 +1,6 @@
 let readline = require(`readline-sync`);
 const VALID_CHOICES = ['rock', 'paper', 'scissors', 'spock', 'lizard'];
+//still have to fix the choices, so you can choose r, p, sc
 
 let humanWin = 0;
 let computerWin = 0;
@@ -60,3 +61,4 @@ while (humanWin < 4 || computerWin < 4) {
     answer = readline.question().toLowerCase();
   }
 }
+
