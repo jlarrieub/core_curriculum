@@ -36,6 +36,7 @@ while (answer === 'y') {
 
   prompt(`Would you like to play another game (y/n)?`);
   answer = readline.question().toLowerCase();
+
   while (answer[0] !== 'n' && answer[0] !== 'y') {
     prompt(`Please enter "y" or "n".`);
     answer = readline.question().toLocaleLowerCase();
