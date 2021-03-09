@@ -604,4 +604,334 @@
 //   }
 // }
 
-/*---------------------BLOCKS-----------------------*/
+/*---------------CONTROL STATEMENTS-----------------------------*/
+// //In case of control statements if, while gets too lengthy, each condition should be put into a new line
+// //bad
+// if ((foo === 123 || bar === 345) && thisIsWayTooLongOfAFunction()) {
+//   thing1();
+// }
+// //bad
+// if (foo === 123 &&
+//   bar === 'abc') {
+//   thing1();
+// }
+// //bad
+// if (foo === 123
+//   && bar === 'abc') {
+//   thing1();
+// }
+// //GOOD
+// if (
+//   (foo === 123 || bar === 345)
+//   && thisIsWayTooLongOfAFunction()
+//   && isThisReallyHappening()
+// ) {
+//   thing1();
+// }
+// //GOOD
+// if (
+//   foo === 123
+//   && bar === 'abc'
+// ) {
+//   thing1();
+// }
+// //GOOD
+// if (foo === 123 && bar === 'abc') {
+//   thing1();
+// }
+
+/*---------------WHITESPACE----------------------------------------*/
+// // Use soft tabs set to to spaces
+// // bad
+// function foo() {
+// ....let name;
+// }
+
+// // bad
+// function bar() {
+// .let name;
+// }
+
+// // good
+// funcion baz() {
+// ..let name;
+// }
+
+// // Place 1 tab before leading with braces
+// // bad
+// function test(){
+//   console.log('test');
+// }
+
+// // good
+// funtion test() {
+//   console.log('test');
+// }
+
+// // Set off operators with spaces
+// // bad
+// const y=x+5
+
+// //good
+// const y = x + 5;
+
+// // Use indentation when making long method chaings (more than 2 methods)
+
+// // bad
+// const leds = stage.selectAll().data(data).enter().append().
+//   highlight().
+//   end().
+//   find();
+
+//   // good
+// const leds = stage.selectAll()
+//   .data(data)
+//   .enter()
+//   .append()
+//   .highlight()
+//   .end()
+//   .find();
+
+//   // Leave a blank line after blocks and before the next statement
+
+//   // bad
+// function findBazOrBar() {
+//   if (foo) {
+//     return baz;
+//   }
+//   return bar;
+// }
+
+// // good
+// function findBazOrBar() {
+//   if (foo) {
+//     return baz;
+//   }
+
+//   return bar;
+// }
+
+// // Do not pad blocks with lines
+// // bad
+// function bar() {
+
+//   if (baz) {
+
+//     console.log(qux);
+//   } else {
+//     console.log(foo);
+//   }
+// }
+
+// // good
+// function bar() {
+//   if (baz) {
+//     console.log(qux);
+//   } else {
+//     console.log(foo);
+//   }
+// }
+
+// // Do not use multiple lines to pad your code
+// // bad
+// function setAge(today) {
+//   today = new Date();
+
+//   console.log(today)
+// }
+
+// // good
+// function setAge(today) {
+//   today = new Date();
+//   console.log(today);
+// }
+
+// // Do not add spaces inside parenthesis ()
+// // bad
+// function ( bar ) {
+//   return foo;
+// }
+
+// // good
+// function (bar) {
+//   return foo;
+// }
+
+// // Do not add spaces inside brackets []
+// // bad
+// const foo = [ 1, 2, 3 ];
+
+// // GOOD
+// const foo = [1, 2, 3];
+
+// // Add spaces inside curly braces {}
+// //bad
+// const bar = {foo: 1, baz: 2}; 
+
+// // Good
+// const bar = { foo: 1, baz: 2 }; 
+
+// // Always add trailing commas
+// // bad
+// const hero = {
+//   firstName: 'Clark',
+//   lastName: 'Kent'
+// }
+
+// //good
+// const hero = {
+//   firstName: 'Clark',
+//   lastName: 'Kent',
+// }
+
+/*---------------TYPE CASTING & COERCION--------------------------*/
+// // For string explicit coercion
+// const reviewScore = 9;
+
+// // bad, turns into an object [String: '9']
+// const totalScore = new String(reviewScore);
+
+// // bad, doesnt turn into string
+// const totalScore = reviewScore + '';
+
+// // bad, doesnt guarantee it turns into string
+// const totalScore = reviewScore.toString();
+
+// // good
+// const totalScore = String(reviewScore);
+
+// // For number explicit coercion
+// const inputValue = '4';
+
+// // bad
+// const val = +inputValue;
+
+// // bad
+// const val = parseInt(inputValue)
+
+// // good
+// const val = Number(inputValue)
+
+// // good
+// const val = parseInt(inputValue, 10);
+
+// // For Boolean explicit coercion
+// const age = 0;
+
+// // bad
+// const hasAge = new Boolean(age);
+
+// // good
+// const hasAge = Boolean(age);
+
+// // best
+// const hasAge = !!age;
+
+/*---------------NAMING CONVENTIONS--------------------------*/
+// // Avoid single letter names, be descriptive in your naming
+
+// // bad
+// function q() { };
+
+// // good
+// function query() { };
+
+// // Use camelCase when naming objects, functions and instances
+
+// // bad
+// const Objects = {};
+// const this_is_an_object = {};
+// function This() { };
+
+// // good
+// const thisObject = {};
+// function thisIsMyFunction() { };
+
+// // Acronyms should always be uppercase or lowercase
+
+// // bad
+// const HttpRequests = [];
+// const SmsCointainer from './containers/SmsContainer';
+
+// // good
+// const HTTPRequests = [];
+// const SMSContainer from './containers/SMSContainer';
+
+//use a variable to pass an argument to function
+//function cant do anything that changes original value
+
+// let name = 'John';
+
+// function addNumber(string) {
+//   return string.toUpperCase();
+// }
+// let newName = addNumber(name);
+// console.log(newName);
+// console.log(name);
+// console.log(newName == name);
+
+// let name = { name: 'nicole'};
+
+// changeName(name);
+
+// function changeName(obj) {
+//   obj.name = 'john';
+// }
+
+
+// console.log(name);
+
+// name = reference101 
+// obj = reference101
+
+// reference101 = { name: 'john' };
+
+// number1 = 1
+// number2 = 1
+
+/*
+
+Write a program that finds the summation of every number from 1 to `num`.  The number will always be a positive integer greater than 0.
+
+*/
+
+
+/*
+Problem:
+- input: 1 number
+- rule:
+addition of every integer between 1 and the argument
+num is also included in the addition
+
+Examples:
+
+Data structures:
+- input: positive integer greater than 0
+- output: positive integer
+- intermediary data structures:
+> integer
+> array?
+
+Algorithm:
+- we initialize a sum variable (at 0)
+- we initialize a counter variable (at 1)
+- we loop through 1 to the argument num:
+  - for each element, we increment sum by the element
+  - increment the counter by 1
+- we return the sum variable
+
+*/
+
+// function summation(num) {
+//   let sum = 0;
+//   let counter = 1;
+  
+//   while (counter <= num) {
+//     sum += counter
+//     counter += 1
+//   }
+  
+//   return sum
+// }
+
+
