@@ -37,10 +37,12 @@
 2. Write a function that will take a short line of text, and write it to the console log within a box.
 */
 
-let numbers = [1, 2, 3, 4];
-for (i = 0; 0 < numbers.length; i++) {
-  numbers.shift()
-  console.log(numbers);
+function logInBox(str) {
   
-}
+//   for (let i = number; 0 < i; i -= 1) {
+//     console.log(`${space.repeat(i - 1)} ${asterix.repeat(f + 1)}`);
+//     f += 1;
+//   }
+// }
 
+// triangle(10);

@@ -12,7 +12,7 @@ const num = [1, 2, 3, 4, 6];
 let index = 0;
 
 while (index < num.length) {
-  num[index] += 1; 
+  num[index] += 1;
   index += 1;
 }
 
@@ -46,7 +46,7 @@ while (true) {
   console.log(randomNum);
 
   if (randomNum === 5) {
-    console.log('Exiting!');
+    console.log("Exiting!");
     break;
   }
 }
@@ -56,7 +56,7 @@ while (true) {
 // STRINGS
 
 // as a while loop
-let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+let alphabet = "abcdefghijklmnopqrstuvwxyz";
 let counter = 0;
 
 while (counter < alphabet.length) {
@@ -73,7 +73,7 @@ for (let counter = 0; counter < alphabet.length; counter += 1) {
 
 // For loops can be used in the same way since arrays are index based
 
-const colors = ['red', 'white', 'blue'];
+const colors = ["red", "white", "blue"];
 
 for (let counter = 0; counter < colors.length; counter += 1) {
   console.log(`The flag has the color ${colors[counter]}!`);
@@ -95,8 +95,8 @@ let addition = 0;
 
 // Very complicated way of iterating over object, but assures no prototypes
 while (addition < pets.length) {
-  let currentPet = pets[addition]; 
-  let currentPetNumber = numberOfPets[currentPet]; 
+  let currentPet = pets[addition];
+  let currentPetNumber = numberOfPets[currentPet];
   console.log(`I have ${currentPetNumber} ${currentPet}`);
   addition += 1;
 }
@@ -110,3 +110,21 @@ for (const currentPet in numberOfPets) {
 
 /* ---------------------------------LOOP CONTROLS---------------------------*/
 
+function substrings(str) {
+  let result = [];
+  let startingIndex = 0;
+
+  while (startingIndex <= str.length - 2) {
+    let numChars = 2;
+    while (numChars <= str.length - startingIndex) {
+      let substring = str.slice(startingIndex, startingIndex + numChars);
+      result.push(substring);
+      numChars += 1;
+    }
+
+    startingIndex += 1;
+  }
+
+  return result;
+}
+let arr = [1, 2, 3, 3];
