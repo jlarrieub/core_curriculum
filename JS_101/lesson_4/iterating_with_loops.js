@@ -35,14 +35,14 @@ while (true) {
 // To stop an infinite loop
 
 while (true) {
-  console.log('Hello!');
+  console.log("Hello!");
   break;
 }
 
 // Creating a while loop with random number, break at number 5
 
 while (true) {
-  const randomNum = Math.floor((Math.random() * 10) + 1);
+  const randomNum = Math.floor(Math.random() * 10 + 1);
   console.log(randomNum);
 
   if (randomNum === 5) {
@@ -127,4 +127,3 @@ function substrings(str) {
 
   return result;
 }
-let arr = [1, 2, 3, 3];

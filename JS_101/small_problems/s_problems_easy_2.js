@@ -1,4 +1,3 @@
-
 // /*
 // 1. Create a function that takes 2 arguments, an array and an object. The array will contain 2 or more elements that, when combined with adjoining spaces, will produce a person's name. The object will contain two keys, "title" and "occupation", and the appropriate values. Your function should return a greeting that uses the person's full name, and mentions the person's title.
 
@@ -84,7 +83,7 @@
 //   Input: Number 1
 //           Number 2
 //   Output: Multiplication of Num1 and Num2
-  
+
 // Example:
 // console.log(multiply(5, 3) === 15); // logs true
 
@@ -154,7 +153,7 @@ Problem:
 // Algorithm:
 // 1. Require readline sync
 // 2. Ask for first Number
-//   1. SET number1 to first number 
+//   1. SET number1 to first number
 //   2. If string, convert to number
 // 3. Ask for second Number
 //   1. SET number2 to second number
@@ -245,8 +244,8 @@ Problem:
 // function xor(arg1, arg2) {
 //   if ((!arg1 && arg2) || (!arg2 && arg1)) {
 //     return true;
-//   } 
-   
+//   }
+
 //   return false;
 // }
 // console.log(xor(5, 0) === true); // true
@@ -265,7 +264,7 @@ Problem:
 // Data Structures:
 // > Arrays
 
-// Algorithm: 
+// Algorithm:
 // 1. Function that takes array as argument
 // 2. Create an empty Array called OddArray
 // 2. WHILE element of array is less than array.length
@@ -297,66 +296,24 @@ Problem:
 // 9. The parseInt() method converts a string of numeric characters (including an optional plus or minus sign) to an integer. The method takes 2 arguments where the first argument is the string we want to convert and the second argument should always be 10 for our purposes. parseInt() and the Number() method behave similarly. In this exercise, you will create a function that does the same thing.
 
 // Write a function that takes a String of digits, and returns the appropriate number as an integer. You may not use any of the methods mentioned above.
-
 // For now, do not worry about leading + or - signs, nor should you worry about invalid characters; assume all characters will be numeric.
 
 // You may not use any of the standard conversion methods available in JavaScript, such as String() and Number(). Your function should do this the old-fashioned way and calculate the result by analyzing the characters in the string.
-
-// Problem: 
-//   Input: Set of Strings (digits)
-//   Output: Number as integer
-// Rules:
-//   Cannot use String() or Number()
-
-// Data Structures:
-// String
-// Array
-
-// Convert string into Integer without using methods
-
-// -Explicit coercion using unary operator
-// */
-// function stringToInteger(string) {
-//   const DIGITS = {
-//     0: 0,
-//     1: 1,
-//     2: 2,
-//     3: 3,
-//     4: 4,
-//     5: 5,
-//     6: 6,
-//     7: 7,
-//     8: 8,
-//     9: 9,
-//     A: 10,
-//     B: 11,
-//     C: 12,
-//     D: 13,
-//     E: 14,
-//     F: 15,
-//   };
-//   let arrayOfIntegers = string.toUpperCase().split('').map(element => DIGITS[element]).reverse();
-
-//   let newArray = [];
-//   for (let i = 0; i < arrayOfIntegers.length; i += 1) {
-//     newArray.push(arrayOfIntegers[i] * (16 ** [i]))
-//   }
-
-//   return newArray.reduce((acc, number) => {
-//     return acc + number;
-//   });
-// }
-
-// console.log(stringToInteger('4D9f') === 19871); // logs true
-
-/*----------------------COULDNT DO NUMBER 10----------------------*/
-
-/*
-11. In the previous two exercises, you developed functions that convert simple numeric strings to signed integers. In this exercise and the next, you're going to reverse those functions.
-
-Write a function that converts a non-negative integer value (e.g., 0, 1, 2, 3, and so on) to the string representation of that integer.
-
-You may not use any of the standard conversion functions available in JavaScript, such as String(), Number.prototype.toString, or an expression such as '' + number. Your function should do this the old-fashioned way and construct the string by analyzing and manipulating the number.
 */
 
-
+function stringToInteger(string) {
+  let stringToNumObj = {
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
+    0: 0,
+  };
+}
+console.log(stringToInteger("4321") === 4321); // logs true
+console.log(stringToInteger("570") === 570); // logs true
